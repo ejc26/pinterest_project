@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gbk" />
+<title>User sign up</title>
+  <style type="text/css">
+    html{font-size:20px;}
+    fieldset{width:520px; margin: 0 auto;}
+    legend{font-weight:bold; font-size:20px;}
+    label{float:left; width:95px; margin-left:30px;}
+    .left{margin-left:120px;}
+    .input{width:120px;}
+    span{color: #666666;}
+    .login{font-size: 20px;text-align: center;}
+  </style>
+<script language=JavaScript>
+<!--
+
+function InputCheck(RegForm)
+{
+  if (RegForm.uname.value == "")
+  {
+    alert("userName cannot blank!");
+    RegForm.uname.focus();
+    return (false);
+  }
+  if (RegForm.pw.value == "")
+  {
+    alert("You must set password!");
+    RegForm.pw.focus();
+    return (false);
+  }
+  if (RegForm.repass.value != RegForm.pw.value)
+  {
+    alert("two passwords are not the same!");
+    RegForm.repass.focus();
+    return (false);
+  }
+  if (RegForm.email.value == "")
+  {
+    alert("Email cannot blank!");
+    RegForm.email.focus();
+    return (false);
+  }
+}
+
+//-->
+</script>
+</head>
+<div>
+<fieldset>
+<legend>User sign up</legend>
+<form name="RegForm" method="post" action="reg.php" onSubmit="return InputCheck(this)">
+<p>
+<label for="uname" class="label">userName:</label>
+<input id="uname" name="uname" type="text" class="input" />
+<span>(must fill)</span>
+<p/>
+<p>
+<label for="pw" class="label">password:</label>
+<input id="pw" name="pw" type="password" class="input" />
+<span>(must fill)</span>
+<p/>
+<p>
+<label for="repass" class="label">confirm password:</label>
+<br>
+<input id="repass" name="repass" type="password" class="input" />
+<p/>
+<p>
+<label for="email" class="label">email:</label>
+<input id="email" name="email" type="text" class="input" />
+<span>(must fill)</span>
+<p/>
+<p>
+<label for="bday" class="label">birthday:</label>
+<input id="bday" name="bday" type="text" class="input" />
+<span>(YYYY-MM-DD)</span>
+<p/>
+<p>
+<label for="gender" class="label">gender:</label>
+<input id="gender" name="gender" type="text" class="input" />
+<span>(male/female)</span>
+<p/>
+<p>
+<label for="interest" class="label">interest:</label>
+<input id="interest" name="interest" type="text" class="input" />
+<p/>
+<p>
+<label for="facebook" class="label">facebook URL:</label>
+<input id="facebook" name="facebook" type="text" class="input" />
+<p/>
+<p>
+<input type="submit" name="submit" value="sign up" class="left" />
+</p>
+</form>
+</fieldset>
+</div>
+<body background="gg.jpg">
+<p class="login">Already a member? <a href='login.html'><strong>login</strong></a></p>
+
+</body>
+</html>
